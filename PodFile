@@ -2,4 +2,6 @@ platform :ios,'11.0'
 use_frameworks!
 target 'PreReactorKit' do
     pod 'ReactorKit'
+    pod 'RxSwift', '~> 4.0.0'
+    pod 'RxCocoa', '~> 4.0.0'
 end

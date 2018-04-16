@@ -1,21 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Counter View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CounterViewController" customModule="PreReactorKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vub-jt-559">
+                                <rect key="frame" x="0.0" y="323" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5F7-Et-D2k">
+                                <rect key="frame" x="87" y="383" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.81807411067686464" green="0.92179409540050028" blue="0.97680455450000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="6YO-SG-iTY"/>
+                                </constraints>
+                                <state key="normal" title="+"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPM-OL-XGk">
+                                <rect key="frame" x="87" y="433" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.81807411070000002" green="0.92179409540000001" blue="0.97680455450000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Jpa-U1-cJX"/>
+                                </constraints>
+                                <state key="normal" title="-"/>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="YmY-qT-1XJ">
+                                <rect key="frame" x="177" y="258" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="a7r-Ct-pHa"/>
+                                    <constraint firstAttribute="height" constant="20" id="arC-WM-ihP"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vub-jt-559" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Dfn-n9-OB3"/>
+                            <constraint firstItem="vub-jt-559" firstAttribute="top" secondItem="YmY-qT-1XJ" secondAttribute="bottom" constant="45" id="IUO-gz-SUB"/>
+                            <constraint firstItem="YmY-qT-1XJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IYq-PT-2Q3"/>
+                            <constraint firstItem="jPM-OL-XGk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RB0-Ik-210"/>
+                            <constraint firstItem="jPM-OL-XGk" firstAttribute="top" secondItem="5F7-Et-D2k" secondAttribute="bottom" constant="20" id="S1U-QW-GuJ"/>
+                            <constraint firstItem="vub-jt-559" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aDf-Am-uw2"/>
+                            <constraint firstItem="5F7-Et-D2k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hcj-d8-gAj"/>
+                            <constraint firstItem="5F7-Et-D2k" firstAttribute="top" secondItem="vub-jt-559" secondAttribute="bottom" constant="39" id="iG0-Yg-EQh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vub-jt-559" secondAttribute="trailing" id="pVX-OJ-mWU"/>
+                            <constraint firstItem="vub-jt-559" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xOa-ks-5vr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="YmY-qT-1XJ" id="paR-Di-Y5H"/>
+                        <outlet property="decreaseButton" destination="jPM-OL-XGk" id="Doq-PW-h7I"/>
+                        <outlet property="increaseButton" destination="5F7-Et-D2k" id="4Ub-CE-QZp"/>
+                        <outlet property="valueLabel" destination="vub-jt-559" id="EfP-MH-rI9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

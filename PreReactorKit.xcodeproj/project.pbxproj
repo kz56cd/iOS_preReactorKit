@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		29BA2EB0B339CF3628CCEB8C /* Pods_PreReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF5A537066D9ACC13558ED2 /* Pods_PreReactorKit.framework */; };
 		EA27C11320843F9100EBB268 /* PodFile in Resources */ = {isa = PBXBuildFile; fileRef = EA27C11220843F9000EBB268 /* PodFile */; };
+		EA27C1152084412C00EBB268 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27C1142084412C00EBB268 /* CounterViewController.swift */; };
+		EA27C1192084463300EBB268 /* CounterViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27C1182084463300EBB268 /* CounterViewReactor.swift */; };
 		EA3713FD208431BA0084DD93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3713FC208431BA0084DD93 /* AppDelegate.swift */; };
-		EA3713FF208431BA0084DD93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3713FE208431BA0084DD93 /* ViewController.swift */; };
 		EA371402208431BA0084DD93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA371400208431BA0084DD93 /* Main.storyboard */; };
 		EA371404208431BA0084DD93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA371403208431BA0084DD93 /* Assets.xcassets */; };
 		EA371407208431BA0084DD93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA371405208431BA0084DD93 /* LaunchScreen.storyboard */; };
@@ -40,9 +41,10 @@
 		0FC20E67E7356E1F14351CC5 /* Pods-PreReactorKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PreReactorKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-PreReactorKit/Pods-PreReactorKit.release.xcconfig"; sourceTree = "<group>"; };
 		C857A37654C7575D9A30E313 /* Pods-PreReactorKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PreReactorKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PreReactorKit/Pods-PreReactorKit.debug.xcconfig"; sourceTree = "<group>"; };
 		EA27C11220843F9000EBB268 /* PodFile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PodFile; sourceTree = "<group>"; };
+		EA27C1142084412C00EBB268 /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
+		EA27C1182084463300EBB268 /* CounterViewReactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterViewReactor.swift; sourceTree = "<group>"; };
 		EA3713F9208431BA0084DD93 /* PreReactorKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PreReactorKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA3713FC208431BA0084DD93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA3713FE208431BA0084DD93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA371401208431BA0084DD93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA371403208431BA0084DD93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA371406208431BA0084DD93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -125,7 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				EA3713FC208431BA0084DD93 /* AppDelegate.swift */,
-				EA3713FE208431BA0084DD93 /* ViewController.swift */,
+				EA27C1182084463300EBB268 /* CounterViewReactor.swift */,
+				EA27C1142084412C00EBB268 /* CounterViewController.swift */,
 				EA371400208431BA0084DD93 /* Main.storyboard */,
 				EA371403208431BA0084DD93 /* Assets.xcassets */,
 				EA371405208431BA0084DD93 /* LaunchScreen.storyboard */,
@@ -290,11 +293,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PreReactorKit/Pods-PreReactorKit-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,7 +332,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA3713FF208431BA0084DD93 /* ViewController.swift in Sources */,
+				EA27C1192084463300EBB268 /* CounterViewReactor.swift in Sources */,
+				EA27C1152084412C00EBB268 /* CounterViewController.swift in Sources */,
 				EA3713FD208431BA0084DD93 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,7 +511,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZMTZ3U33V;
 				INFOPLIST_FILE = PreReactorKit/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cc.ka56cd.PreReactorKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -521,7 +530,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZMTZ3U33V;
 				INFOPLIST_FILE = PreReactorKit/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cc.ka56cd.PreReactorKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -537,7 +549,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZMTZ3U33V;
 				INFOPLIST_FILE = PreReactorKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cc.ka56cd.PreReactorKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -554,7 +570,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZMTZ3U33V;
 				INFOPLIST_FILE = PreReactorKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cc.ka56cd.PreReactorKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -570,7 +590,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZMTZ3U33V;
 				INFOPLIST_FILE = PreReactorKitUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cc.ka56cd.PreReactorKitUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -586,7 +610,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZMTZ3U33V;
 				INFOPLIST_FILE = PreReactorKitUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cc.ka56cd.PreReactorKitUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
