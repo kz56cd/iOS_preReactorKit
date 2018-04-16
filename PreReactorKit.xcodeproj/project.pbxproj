@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29BA2EB0B339CF3628CCEB8C /* Pods_PreReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF5A537066D9ACC13558ED2 /* Pods_PreReactorKit.framework */; };
+		EA27C11320843F9100EBB268 /* PodFile in Resources */ = {isa = PBXBuildFile; fileRef = EA27C11220843F9000EBB268 /* PodFile */; };
 		EA3713FD208431BA0084DD93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3713FC208431BA0084DD93 /* AppDelegate.swift */; };
 		EA3713FF208431BA0084DD93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3713FE208431BA0084DD93 /* ViewController.swift */; };
 		EA371402208431BA0084DD93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA371400208431BA0084DD93 /* Main.storyboard */; };
@@ -34,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0CF5A537066D9ACC13558ED2 /* Pods_PreReactorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PreReactorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FC20E67E7356E1F14351CC5 /* Pods-PreReactorKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PreReactorKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-PreReactorKit/Pods-PreReactorKit.release.xcconfig"; sourceTree = "<group>"; };
+		C857A37654C7575D9A30E313 /* Pods-PreReactorKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PreReactorKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PreReactorKit/Pods-PreReactorKit.debug.xcconfig"; sourceTree = "<group>"; };
+		EA27C11220843F9000EBB268 /* PodFile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PodFile; sourceTree = "<group>"; };
 		EA3713F9208431BA0084DD93 /* PreReactorKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PreReactorKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA3713FC208431BA0084DD93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA3713FE208431BA0084DD93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29BA2EB0B339CF3628CCEB8C /* Pods_PreReactorKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +81,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		379F9CBB90670AE7AC58C4A6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C857A37654C7575D9A30E313 /* Pods-PreReactorKit.debug.xcconfig */,
+				0FC20E67E7356E1F14351CC5 /* Pods-PreReactorKit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		95BBF1F5A34D31EB98EEFBC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0CF5A537066D9ACC13558ED2 /* Pods_PreReactorKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EA3713F0208431BA0084DD93 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +105,9 @@
 				EA371410208431BB0084DD93 /* PreReactorKitTests */,
 				EA37141B208431BB0084DD93 /* PreReactorKitUITests */,
 				EA3713FA208431BA0084DD93 /* Products */,
+				EA27C11220843F9000EBB268 /* PodFile */,
+				379F9CBB90670AE7AC58C4A6 /* Pods */,
+				95BBF1F5A34D31EB98EEFBC4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA371421208431BB0084DD93 /* Build configuration list for PBXNativeTarget "PreReactorKit" */;
 			buildPhases = (
+				7E4CA24BC88F3FE3A1CBB312 /* [CP] Check Pods Manifest.lock */,
 				EA3713F5208431BA0084DD93 /* Sources */,
 				EA3713F6208431BA0084DD93 /* Frameworks */,
 				EA3713F7208431BA0084DD93 /* Resources */,
+				5B815FA295949FE28A8A24EE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,6 +260,7 @@
 			files = (
 				EA371407208431BA0084DD93 /* LaunchScreen.storyboard in Resources */,
 				EA371404208431BA0084DD93 /* Assets.xcassets in Resources */,
+				EA27C11320843F9100EBB268 /* PodFile in Resources */,
 				EA371402208431BA0084DD93 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +280,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B815FA295949FE28A8A24EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PreReactorKit/Pods-PreReactorKit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PreReactorKit/Pods-PreReactorKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E4CA24BC88F3FE3A1CBB312 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PreReactorKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EA3713F5208431BA0084DD93 /* Sources */ = {
@@ -428,15 +499,13 @@
 		};
 		EA371422208431BB0084DD93 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C857A37654C7575D9A30E313 /* Pods-PreReactorKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZMTZ3U33V;
 				INFOPLIST_FILE = PreReactorKit/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.ka56cd.PreReactorKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -446,15 +515,13 @@
 		};
 		EA371423208431BB0084DD93 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FC20E67E7356E1F14351CC5 /* Pods-PreReactorKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZMTZ3U33V;
 				INFOPLIST_FILE = PreReactorKit/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.ka56cd.PreReactorKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -470,11 +537,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZMTZ3U33V;
 				INFOPLIST_FILE = PreReactorKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.ka56cd.PreReactorKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -491,11 +554,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZMTZ3U33V;
 				INFOPLIST_FILE = PreReactorKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.ka56cd.PreReactorKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -511,11 +570,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZMTZ3U33V;
 				INFOPLIST_FILE = PreReactorKitUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.ka56cd.PreReactorKitUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -531,11 +586,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZMTZ3U33V;
 				INFOPLIST_FILE = PreReactorKitUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.ka56cd.PreReactorKitUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
