@@ -35,11 +35,9 @@ final class CounterViewReactor: Reactor {
         )
     }
     
-    func mutate(_ action: Action) -> Observable<Mutation> {
+    func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case .increase:
-            print("🤮 01")
-            
             return Observable.concat([
                 Observable.just(Mutation.setLoading(true)),
                 Observable.just(Mutation.increaseValue).delay(0.5, scheduler: MainScheduler.instance),
@@ -58,7 +56,6 @@ final class CounterViewReactor: Reactor {
         var state = state
         switch mutation {
         case .increaseValue:
-            print("🤮 02")
             state.value += 1
         case .decreaseValue:
             state.value -= 1

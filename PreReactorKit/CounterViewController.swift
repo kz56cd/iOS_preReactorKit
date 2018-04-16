@@ -12,7 +12,7 @@ import RxCocoa
 import RxSwift
 
 class CounterViewController: UIViewController, StoryboardView {
-    typealias Reactor = CounterViewReactor
+//    typealias Reactor = CounterViewReactor
     
     @IBOutlet var decreaseButton: UIButton!
     @IBOutlet var increaseButton: UIButton!
@@ -52,24 +52,34 @@ class CounterViewController: UIViewController, StoryboardView {
 //            .bind(to: activityIndicatorView.rx.isAnimating)
 //            .disposed(by: disposeBag)
 //    }
-    
-    func bind(reactor: CounterViewController.Reactor) {
+  
+        func bind(reactor: CounterViewReactor) {
+//    func bind(reactor: CounterViewController.Reactor) {
         // Action
+            
+        print("きてんの？？？")
+            
+//        _ = increaseButton.rx.tap.map { print("hoge") }
+//        _ = decreaseButton.rx.tap.map { print("fuga") }
+        
         increaseButton.rx.tap
             .map { Reactor.Action.increase }
+            .debug()
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         decreaseButton.rx.tap
             .map { Reactor.Action.decrease }
+            .debug()
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
 
         // State
-        reactor.state.map { $0.value }
+        reactor.state.map { $0.value }   // 10
             .distinctUntilChanged()
-            .map { "\($0)" }
-            .bind(to: valueLabel.rx.text)
+            .map { "\($0)" }               // "10"
+            .bind(to: valueLabel.rx.text)  // Bind to valueLabel
             .disposed(by: disposeBag)
+        
         reactor.state.map { $0.isLoading }
             .distinctUntilChanged()
             .bind(to: activityIndicatorView.rx.isAnimating)
